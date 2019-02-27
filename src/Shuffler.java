@@ -1,7 +1,7 @@
 /**
  * This class provides a convenient way to test shuffling methods.
  */
-import.Card;
+
 public class Shuffler {
 
     /**
@@ -52,16 +52,13 @@ public class Shuffler {
      */
     public static void perfectShuffle(int[] values) {
         /* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
-        Card[] shuffled = new Card[52];
-        int k = 0;
-        for(int j=0; j<(cards.length+1)/2; j++){
-            cards[j]=shuffled[k];
-            k=k+2;
+        int [] card = new int [52];
+        for(int k=0; k<card.length-1; k++){
+            card[k]=k;
         }
-        k=1;
-        for(int j=0; j>(cards.length+1)/2 && j<cards.length; j++){
-            cards[j]=shuffled[k];
-            k=k+2;
+
+        for(int i=0; i<(card.length+1)/2; i++){
+
         }
     }
 
