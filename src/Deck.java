@@ -63,7 +63,7 @@ public class Deck {
      */
     public int size() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-        return size;
+        return this.cards.size();
     }
 
     /**
@@ -81,10 +81,12 @@ public class Deck {
      */
     public Card deal() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-         while (size > 0){
-             return deck[size];
-             size--;
-         }
+        if (isEmpty()){
+            return null;
+        }
+        size--;
+        Card c = cards.get(size);
+        return c;
     }
 
     /**
