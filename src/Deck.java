@@ -72,6 +72,12 @@ public class Deck {
      */
     public void shuffle() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+        int[] shuffled = new int[52];
+        for (int i = 0; i < shuffled.length; i++){
+            int j = (int)(Math.random() *51);
+            shuffled[i]= values[j];
+            values[j] = -1;
+        }
     }
 
     /**
