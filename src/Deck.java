@@ -40,6 +40,8 @@ public class Deck {
 		        cards.add(temp);
             }
         }
+
+        size=cards.size();
     }
 
 
@@ -72,11 +74,12 @@ public class Deck {
      */
     public void shuffle() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
-        int[] shuffled = new int[52];
-        for (int i = 0; i < shuffled.length; i++){
-            int j = (int)(Math.random() *51);
-            shuffled[i]= values[j];
-            values[j] = -1;
+        for (int i = 0; i < cards.size(); i++){
+            int pos2 = (int)(Math.random() * cards.size()-1);
+            Card temp;
+            temp=cards.get(i);
+            cards.set(i, cards.get(pos2));
+            cards.set(pos2, temp);
         }
     }
 

@@ -85,6 +85,7 @@ public class Shuffler {
             int j = (int)(Math.random() *51);
             shuffled[i]= values[j];
             values[j] = -1;
+
         }
     }
 }
